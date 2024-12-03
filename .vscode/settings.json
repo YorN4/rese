@@ -1,0 +1,26 @@
+{
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+
+    "[python]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "python.defaultInterpreterPath": "./.pdm-python",
+    "python.analysis.extraPaths": ["./__pypackages__/3.11/lib"],
+    "python.autoComplete.extraPaths": ["./__pypackages__/3.11/lib"],
+    "flake8.args": [
+        "--max-line-length=256",
+        "--ignore=E203,E402,W503,W504"
+    ],
+    "isort.args": [
+        "--profile=black"
+    ],
+    "black-formatter.args": ["--line-length=256"],
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    }
+}

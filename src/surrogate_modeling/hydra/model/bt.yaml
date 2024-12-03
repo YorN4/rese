@@ -1,0 +1,15 @@
+name: bt
+dim: 256
+depth: 4
+heads: 2
+fc_dim: 512
+dropout: 0.0
+emb_dropout: 0.5
+
+# params:
+#   model.dim: choice(64, 128, 256, 512, 1024)
+#   model.depth: range(2, 8)
+#   model.heads: choice(2, 4, 8)
+#   model.fc_dim: choice(128, 256, 512, 1024, 2048)
+#   model.dropout: choice(0.0, 0.1, 0.5)
+#   model.emb_dropout: choice(0.0, 0.1, 0.5)

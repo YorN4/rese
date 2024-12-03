@@ -1,0 +1,11 @@
+name: mazda-v2
+num_control: 15
+num_pred: 47
+num_all_features: 62
+data_path: mazda-v2
+
+data_size: 294
+val_size: 29
+test_size: 58
+
+direction: [minimize, minimize, minimize, minimize, minimize, minimize, minimize, minimize, minimize, minimize]

@@ -1,0 +1,9 @@
+name: lstm
+dim: 512
+depth: 2
+dropout: 0.1
+
+# params:
+#   model.dim: choice(64, 128, 256, 512, 1024)
+#   model.depth: range(2,8)
+#   model.dropout: choice(0.0, 0.1, 0.5)

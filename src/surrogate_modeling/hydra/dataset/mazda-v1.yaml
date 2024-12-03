@@ -1,0 +1,11 @@
+name: mazda-v1
+num_control: 9
+num_pred: 41
+num_all_features: 50
+data_path: mazda-v1
+
+data_size: 500
+val_size: 50
+test_size: 100
+
+direction: [minimize, minimize, minimize, minimize, minimize, minimize, minimize, minimize]

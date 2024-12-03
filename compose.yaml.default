@@ -1,0 +1,29 @@
+services:
+  mazda-rc:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: mazda-rc-image
+    container_name: mazda-rc-container
+    volumes:
+      - :/home/dockeruser/code
+      - :/home/dockeruser/mlflow_experiment
+      - :/home/dockeruser/dataset
+    ports:
+      - "18888:18888"
+      - "5555:5555"
+    expose:
+      - "18888"
+      - "5555"
+    command: /bin/bash -c "pdm install && pdm run jupyter lab build && pdm run jupyter lab --ip=0.0.0.0 --port=18888 --no-browser --NotebookApp.token='' & pdm run mlflow ui -h 0.0.0.0 --backend-store-uri /home/dockeruser/mlflow_experiment/ -p 5555"
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - TZ=Asia/Tokyo
+    shm_size: '16gb'
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]

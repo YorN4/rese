@@ -1,0 +1,15 @@
+# 学習環境
+is_debug: False       # デバッグモードかどうか
+use_decimate : True   # データの間引きをするか
+decimate_range: 1.0   # データの間引き間隔。デフォルトは0.1秒刻みデータを1.0秒間隔にする。
+in_len: 10            # 入力するステップ数
+out_len: 1            # 予測するステップ数
+seed: 42              # シード値
+epochs: 500           # エポック数
+batch_size: 1024      # バッチサイズ
+lr: 0.001             # 学習率
+criterion: mse        # 損失関数
+is_save_model: False  # モデルを保存するかどうか(False推奨)
+
+# mlflowの設定
+mlflow_exp_name: pytorch_lightning_test # mlflowのexperiment名

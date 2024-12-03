@@ -1,0 +1,33 @@
+name: dot
+# mazda-v2のパラメータ
+# heads: 4
+# fc_dim: 2048
+# trunk_depth: 3
+# trunk_dim: 256
+# branch_depth: 2
+# branch_dim: 1024
+# width: 32
+# dropout: 0.0
+# emb_dropout: 0.5
+
+# mazda-v1のパラメータ
+heads: 8
+fc_dim: 1024
+trunk_depth: 2
+trunk_dim: 256
+branch_depth: 2
+branch_dim: 128
+width: 32
+dropout: 0.0
+emb_dropout: 0.5
+
+# params:
+#   model.heads: choice(2, 4, 8)
+#   model.fc_dim: choice(128, 256, 512, 1024, 2048)
+#   model.trunk_depth: range(2,8)
+#   model.trunk_dim: choice(64, 128, 256, 512, 1024)
+#   model.branch_depth: range(2,8)
+#   model.branch_dim: choice(64, 128, 256, 512, 1024)
+#   model.width: choice(32, 64, 128, 256, 512, 1024)
+#   model.dropout: choice(0.0, 0.1, 0.5)
+#   model.emb_dropout: choice(0.0, 0.1, 0.5)

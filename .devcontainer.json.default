@@ -1,0 +1,42 @@
+{
+    "name": "mazda refrigerant circuit devcontainer",
+    "build": {
+		"dockerfile": "./Dockerfile"
+	},
+    "workspaceFolder": "/home/dockeruser/code",
+    "remoteUser": "dockeruser",
+    "mounts": [
+        {
+            "type": "bind",
+            "source": ,
+            "target": "/home/dockeruser/code"
+        },
+        {
+            "type": "bind",
+            "source": ,
+            "target": "/home/dockeruser/mlflow_experiment/"
+        },
+        {
+            "type": "bind",
+            "source": ,
+            "target": "/home/dockeruser/dataset/"
+        }
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "EditorConfig.EditorConfig",
+                "usernamehw.errorlens",
+                "shardulm94.trailing-spaces",
+                "ms-python.python",
+                "ms-python.black-formatter",
+                "ms-python.flake8",
+                "ms-python.isort",
+                "esbenp.prettier-vscode",
+                "njpwerner.autodocstring",
+                "mhutchie.git-graph",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    }
+}
